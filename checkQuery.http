@@ -18,13 +18,14 @@ POST http://localhost:3003/tasks/add/
 Content-Type: application/json
 
 {
-    "id":"4",
-    "user_id":"2",
-    "task":"provide safety"
+    "id":"1",
+    "user_id":"1",
+    "task":"learn full stack devlopment",
+    "is_completed":"false"
 }
 
 ### 
-DELETE http://localhost:3003/task/4/
+DELETE http://localhost:3003/task/1/
 
 ### 
 GET http://localhost:3003/task/user/2/

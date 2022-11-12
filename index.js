@@ -87,7 +87,7 @@ app.delete("/users/:id/",async(request,response) => {
 
 app.post("/tasks/add/",async(request,response) => {
   const taskDetails = request.body 
-  const {id,user_id,task} = taskDetails
+  const {id,user_id,task,is_completed} = taskDetails
   const checkTaskExistsOrNot = `
   SELECT * FROM tasks WHERE user_id = '${user_id}';
   `
@@ -95,7 +95,7 @@ app.post("/tasks/add/",async(request,response) => {
   const filterData = usersTask.filter(eachData => eachData.task === task)
   if (filterData.length === 0){
     const addTaskQuery = `
-  INSERT INTO tasks (id,user_id,task) VALUES ("${id}","${user_id}","${task}")
+  INSERT INTO tasks (id,user_id,task,is_completed) VALUES ("${id}","${user_id}","${task}","${is_completed}")
   ;`
   const addNewTaskId = await db.run(addTaskQuery)
   const newTaskId = addNewTaskId.lastID 
