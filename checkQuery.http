@@ -1,0 +1,30 @@
+### 
+GET http://localhost:3003/users/
+
+### 
+POST http://localhost:3003/users/add/
+Content-Type: application/json
+
+{
+    "id":"4",
+    "username":"NxtWave"
+}
+
+### 
+DELETE http://localhost:3003/users/3/
+
+### 
+POST http://localhost:3003/tasks/add/
+Content-Type: application/json
+
+{
+    "id":"4",
+    "user_id":"2",
+    "task":"provide safety"
+}
+
+### 
+DELETE http://localhost:3003/task/4/
+
+### 
+GET http://localhost:3003/task/user/2/

@@ -1,0 +1,21 @@
+{
+  "name": "iotrl_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2"
+  }, "engines": {
+    "node": "14.18.2"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  }
+}
