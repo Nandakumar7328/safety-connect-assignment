@@ -29,3 +29,15 @@ DELETE http://localhost:3003/task/1/
 
 ### 
 GET http://localhost:3003/task/user/2/
+
+### 
+PUT  http://localhost:3003/task/update/1/
+Content-Type: application/json
+
+{
+    "is_completed":"false"
+}
+
+###
+
+GET http://localhost:3003/username/2/

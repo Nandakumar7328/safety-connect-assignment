@@ -130,3 +130,29 @@ app.get("/task/user/:user_id/",async(request,response) => {
   const getAllTask = await db.all(getTaskQuery)
   response.send(getAllTask.map((eachtask) => eachtask))
 })
+
+// update api
+
+app.put("/task/update/:id",async(request,response) => {
+  const {id} = request.params 
+  const {is_completed} = request.body 
+  const updateTaskQuery = `
+  UPDATE tasks SET  is_completed = '${is_completed}'
+  WHERE id = '${id}';
+  `
+  await db.run(updateTaskQuery)
+  response.send("Update successfuly")
+
+
+})
+
+//get username by id api 
+
+app.get("/username/:user_id",async(request,response) => {
+  const {user_id} = request.params 
+  const getUsernameQuery = `
+  SELECT username FROM users WHERE id = '${user_id}';
+  `
+  const getUserName = await db.get(getUsernameQuery)
+  response.send(getUserName)
+})
