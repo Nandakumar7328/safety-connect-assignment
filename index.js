@@ -67,6 +67,7 @@ app.post("/users/add/", async(request,response) =>{
     response.send(`create new user with ${newUserId}`)
   }
   else{
+    response.status(400)
     response.send("User already exists")
   }
 })
@@ -102,6 +103,7 @@ app.post("/tasks/add/",async(request,response) => {
   response.send(`created new task with id ${newTaskId}`)
   }
   else{
+    response.status(400)
     response.send("task already exists")
   }
 })

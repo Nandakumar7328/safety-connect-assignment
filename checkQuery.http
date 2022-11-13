@@ -6,8 +6,8 @@ POST http://localhost:3003/users/add/
 Content-Type: application/json
 
 {
-    "id":"4",
-    "username":"NxtWave"
+    "id":"1",
+    "username":"Nandakumar"
 }
 
 ### 
